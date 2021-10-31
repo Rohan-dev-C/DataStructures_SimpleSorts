@@ -17,6 +17,7 @@ namespace SelectionSort
             while (sortedIndex < list.Count)
             {   
                 smallestNumber = list[sortedIndex];
+                index = sortedIndex; 
                 for (int i = sortedIndex; i < list.Count; i++)
                 {
                     if (list[i] < smallestNumber)
@@ -24,24 +25,26 @@ namespace SelectionSort
                         smallestNumber = list[i];
                         index = i; 
                     }
+                    
                 }
                 int temp = list[sortedIndex];
                 list[sortedIndex] = smallestNumber;
                 list[index] = temp;
-                 
                 sortedIndex++;
                 
             }
         }
 
+      
+       
 
-
+        
 
         static void Main(string[] args)
         {
 
             List<int> list = new List<int>();
-            Random rand = new Random();
+            Random rand = new Random(3);
 
             int randomNum = rand.Next(5, 10);
 

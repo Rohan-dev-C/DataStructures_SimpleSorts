@@ -11,9 +11,6 @@ namespace BubbleSort
     {
 
 
-
-
-
         static void sort(ref List<int> list)
         {
             int listLength = list.Count - 1;
